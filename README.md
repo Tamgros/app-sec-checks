@@ -7,8 +7,6 @@
 
 ## Add Verifiable information
 - [ ] Squads multisig - Stepan Simkin
-- [ ] Treasury abstracted away
-- [ ] Circuit breaker, freeze ability on attack
 - [ ] Devnet implementation
 - [ ] Client SDKs, if front end gets hacked, need to be able to execute through sdk
 
@@ -18,6 +16,8 @@
 
 ## best practices
 - [ ] Pager duty 
+- [ ] Circuit breaker, freeze ability on attack
+- [ ] Treasury abstracted away
 
 [Airgapped signing](https://www.notion.so/Airgapped-signing-f5c5b3ab5a904d18899567816cb6cb33)
 
@@ -39,3 +39,6 @@ Open a github issue with the checklist
 Jiri had a great suggestion
 
 - Turn this into a community driven discussion
+
+## Extra credit
+- [ ] Formal verification (https://twitter.com/squadsprotocol/status/1618671630359887873?s=46&t=-oVDphlUuRY-yldrtuWokQ)
