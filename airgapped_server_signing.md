@@ -29,37 +29,78 @@ Your main signing service should not be connected to the open internet. Instead,
     - not just types, also ranges
     - consider interactions where appropriate
 
-The API parameters should be well defined and the functions should be scoped for specific functionality. ie, instead of
+The API parameters should be well defined and the functions should be scoped for specific functionality. ie, instead of a generic
 
 ```typescript
-async function transfer(transfer): Promise<web>
+async function signTransfer(transactionToSign): Promise<TransactionSignature> {
+    ...
+};
 
 ```
-
+be very explicit with the 
+- parameters 
+  - the types of the parameters
+- be specific with the methods being signed
 ```typescript
-import * as web3 from '@solana/web3'
-import * as token from '@solana/spl-token'
+import { transfer } from '@solana/spl-token';
+import { transaction } from '@solana/web3.js';
 
-async function buildTransferTransaction(
-    source: web3.PublicKey,
-    destination: web3.PublicKey,
-    owner: web3.PublicKey,
-    amount: number
-): Promise<web3.Transaction> {
-    const transaction = new web3.Transaction().add(
-        token.createTransferInstruction(
-            source,
-            destination,
-            owner,
-            amount,
-        )
-    )
+async function signTransfer(
+    serverWallet: keyPair,
+    toTokenAccount: tokenAccount,
+    ammount: number,
+// ): Promise<transaction.signature> {
+): Promise<TransactionSignature> {
 
-    return transaction
+    const fromTokenAccount = await getOrCreateAssociatedTokenAccount(
+        connection,
+        serverWallet,
+        mint,
+        serverWallet.publicKey
+    );
+
+   // Transfer the new token to the "toTokenAccount"
+    signature = await transfer(
+        connection,
+        serverWallet,
+        fromTokenAccount.address,
+        toTokenAccount.address,
+        serverWallet.publicKey,
+        ammount
+    );
+
+    return signature
+    }
+```
+Get as granular as possible. If you have different types of transfers, name them explicitly with the appropriate checks
+```typescript
+
+var whiteList Array<publicKey> = []: 
+
+async function signWhitelistTransfer(
+    ...
+    toTokenAccount: tokenAccount,
+    ammount: number
+): Promise<TransactionSignature> {
+    Assert(whiteList.includes(toTokenAccount.address));
+
+    Assert( someCondition(ammount));
 }
 
+async function signHundredTokenTransfer(
+    ...
+    ammount: number
+): Promise<TransactionSignature> {
+
+    Assert( ammount == 100);
+}
 
 ```
+
+
+
+
+// https://soldev.app/course/token-program
   
 ### Code contribution 
 - [Give Contributors least permissions to do their work](https://en.wikipedia.org/wiki/Principle_of_least_privilege#:~:text=The%20principle%20means%20giving%20a,backup%20and%20backup%2Drelated%20applications.)
