@@ -37,42 +37,16 @@ async function signTransfer(transactionToSign): Promise<TransactionSignature> {
 };
 
 ```
-be very explicit with the 
+Instead, be very explicit: 
 - parameters 
-  - the types of the parameters
+  - The types of the parameters
+  - Check parameter expectations
 - be specific with the methods being signed
-```typescript
-import { transfer } from '@solana/spl-token';
-import { transaction } from '@solana/web3.js';
 
-async function signTransfer(
-    serverWallet: keyPair,
-    toTokenAccount: tokenAccount,
-    ammount: number,
-// ): Promise<transaction.signature> {
-): Promise<TransactionSignature> {
+Get as granular as possible. If you have different types of transfers, name them explicitly with the appropriate checks and probably even have them have them be different methods. 
 
-    const fromTokenAccount = await getOrCreateAssociatedTokenAccount(
-        connection,
-        serverWallet,
-        mint,
-        serverWallet.publicKey
-    );
+**Instead of the above flexible function, this would be better**
 
-   // Transfer the new token to the "toTokenAccount"
-    signature = await transfer(
-        connection,
-        serverWallet,
-        fromTokenAccount.address,
-        toTokenAccount.address,
-        serverWallet.publicKey,
-        ammount
-    );
-
-    return signature
-    }
-```
-Get as granular as possible. If you have different types of transfers, name them explicitly with the appropriate checks
 ```typescript
 
 var whiteList Array<publicKey> = []: 
@@ -80,23 +54,35 @@ var whiteList Array<publicKey> = []:
 async function signWhitelistTransfer(
     ...
     toTokenAccount: tokenAccount,
-    ammount: number
+    amount: number
 ): Promise<TransactionSignature> {
     Assert(whiteList.includes(toTokenAccount.address));
 
-    Assert( someCondition(ammount));
+    Assert( someCondition(amount));
+    ...
 }
 
 async function signHundredTokenTransfer(
     ...
-    ammount: number
+    amount: number
 ): Promise<TransactionSignature> {
 
-    Assert( ammount == 100);
+    Assert( amount == 100);
+    ...
 }
 
 ```
 
+This should also be reflected in the API design. 
+```javascript
+app.post('/signWhitelistTransfer', (req, res) => {
+    // req should contain the exact info
+});
+
+app.post('/signHundredTokenTransfer', (req, res) => {
+    // req should contain the exact info
+});
+```
 
 
 
