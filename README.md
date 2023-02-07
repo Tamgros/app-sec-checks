@@ -9,6 +9,7 @@
 - [ ] Squads multisig - Stepan Simkin
 - [ ] Devnet implementation
 - [ ] Client SDKs, if front end gets hacked, need to be able to execute through sdk
+- [ ] Verifiabile builds. [Example from Eclipse](https://github.com/Ellipsis-Labs/solana-verifiable-build)
 
 
 ## Description needed
