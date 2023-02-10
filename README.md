@@ -29,7 +29,9 @@
 
 
 ## Situationally relevant
-- [ ]  Econ vulnerabilities (a la Gauntlet)
+- [ ]  Econ vulnerabilities
+  - [ ]  [Gauntlet](https://gauntlet.network/)
+  - [ ]  [20 squares](https://20squares.xyz/) (not yet Solana)
 
 
 ## Process#
@@ -37,9 +39,16 @@ Open a github issue with the checklist
 
 - [https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists)
 
-Jiri had a great suggestion
-
-- Turn this into a community driven discussion
-
 ## Extra credit
 - [ ] Formal verification (https://twitter.com/squadsprotocol/status/1618671630359887873?s=46&t=-oVDphlUuRY-yldrtuWokQ)
+
+
+Jiri had a great suggestion
+- Turn this into a community driven discussion
+
+
+## Discusion
+- risks - security theater. Wastes time and doesn't actually increase secruity
+- Who reviews authentically?
+  - v0 - self review with informal signoff
+  - v1 - some sort of DAO vote? POA?
