@@ -1,4 +1,4 @@
-# defi-checks
+# app-sec-checks
 
 ## Linked pages
 - [ ] Bug bounties clear and explicit 
@@ -52,3 +52,10 @@ Jiri had a great suggestion
 - Who reviews authentically?
   - v0 - self review with informal signoff
   - v1 - some sort of DAO vote? POA?
+
+TODO
+- external "approvals"
+- explore putting it as a standard template
+- Part of anchor init?
+- Part of the explorer verification process
+- Client/user side best practices
