@@ -5,7 +5,7 @@
 3. [API Design](#api-design)
 4. [Next Steps](#next-steps)
 
-# TODO https://www.notion.so/solanafoundation/Security-DeFi-group-review-process-8293b3a199c94b43a1f576cd093dc306
+## TODO https://www.notion.so/solanafoundation/Security-DeFi-group-review-process-8293b3a199c94b43a1f576cd093dc306
 
 ## Problem
 
