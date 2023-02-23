@@ -1,7 +1,7 @@
 # app-sec-checks
-__ The goal of this list is to have a common framework to view up and downstream projects' security __
-__ A good example of this would be interacting with an external partner. Each project isn't necessarily__
-__ Just giving assurances for their own app, they're also getting assurances
+> The goal of this list is to have a common framework to view up and downstream projects' security. A good example of this would be interacting with an external partner. Each project isn't necessarily doing BD in isolation, there is an ecosystem of collaborative projects.
+
+> In the good case, Solana can show off network effects. In the negative case, many "points of failure" can be intimidating. This doc is here to lower that barrier.
 
 ## Linked pages
 - [ ] Bug bounties clear and explicit 
@@ -10,7 +10,7 @@ __ Just giving assurances for their own app, they're also getting assurances
 
 ## Add Verifiable information
 - [ ] [Upgrade Authority Best practices](https://blog.neodyme.io/posts/solana_upgrade_authority/)
-  - [ ] Squads multisig - Stepan Simkin
+  - [ ] Squads multisig - Stepan Simkin (guide?)
 - [ ] Devnet implementation
 - [ ] Client SDKs, if front end gets hacked, need to be able to execute through sdk
 - [ ] Verifiabile builds. [Example from Eclipse](https://github.com/Ellipsis-Labs/solana-verifiable-build)
