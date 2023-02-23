@@ -2,11 +2,12 @@
 
 ## Linked pages
 - [ ] Bug bounties clear and explicit 
-- [ ] Audited
 - [ ] Open source, published ABI
+- [ ] Audit Docs
 
 ## Add Verifiable information
-- [ ] Squads multisig - Stepan Simkin
+- [ ] [Upgrade Authority Best practices](https://blog.neodyme.io/posts/solana_upgrade_authority/)
+  - [ ] Squads multisig - Stepan Simkin
 - [ ] Devnet implementation
 - [ ] Client SDKs, if front end gets hacked, need to be able to execute through sdk
 - [ ] Verifiabile builds. [Example from Eclipse](https://github.com/Ellipsis-Labs/solana-verifiable-build)
@@ -16,11 +17,17 @@
 - [ ] Paths to immutable/soft frozen
 
 ## best practices
+### Off chain
 - [ ] Pager duty 
 - [ ] Circuit breaker, freeze ability on attack
 - [ ] Treasury abstracted away
+- [ ] [Airgapped signing](https://www.notion.so/Airgapped-signing-f5c5b3ab5a904d18899567816cb6cb33)
 
-[Airgapped signing](https://www.notion.so/Airgapped-signing-f5c5b3ab5a904d18899567816cb6cb33)
+### On chain Code
+  ((request for checklist, here's some inspo ))  
+[neodyme's audit prep](https://github.com/neodyme-labs/solana-security-txt)  
+[neodyme's common pitfalls](https://blog.neodyme.io/posts/solana_common_pitfalls/)
+
 
 ## CI/CD:
 - [ ] Text searches for any private keys

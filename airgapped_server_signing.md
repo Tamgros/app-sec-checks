@@ -16,9 +16,9 @@ Common examples of this is a centralized exchanges signing for withdraws or a vi
 ## Overview
 This article will talk about the security around automatic server authoritative signing.
 
-### Air Gap Signing [Wikipedia on Air Gap networking](https://en.wikipedia.org/wiki/Air_gap_(networking))
+### "Air Gap Signing" [Wikipedia on Air Gap networking](https://en.wikipedia.org/wiki/Air_gap_(networking))
 
-Your main signing service should not be connected to the open internet. Instead, your server should call the signing service through a white listed connection. Some providers provide tools for the server to connect externally through gateways, but still connect to internal services in a VPN
+Ok, so this isn't completely air gapped, but I'm exaggering to get your attention. Your main signing service should not be connected to the open internet. Instead, your server should call the signing service through a white listed connection. Some providers provide tools for the server to connect externally through gateways, but still connect to internal services in a VPN
 
 - Only interface to the API should be through a secure whitelisted enpoint
   
