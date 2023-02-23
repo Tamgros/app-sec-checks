@@ -1,4 +1,7 @@
 # app-sec-checks
+__ The goal of this list is to have a common framework to view up and downstream projects' security __
+__ A good example of this would be interacting with an external partner. Each project isn't necessarily__
+__ Just giving assurances for their own app, they're also getting assurances
 
 ## Linked pages
 - [ ] Bug bounties clear and explicit 
@@ -41,9 +44,8 @@
   - [ ]  [20 squares](https://20squares.xyz/) (not yet Solana)
 
 
-## Process#
-Open a github issue with the checklist
-
+## Process
+Open a github issue with the checklist  
 - [https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists)
 
 ## Extra credit
@@ -66,4 +68,3 @@ TODO
 - Part of anchor init?
 - Part of the explorer verification process
 - Client/user side best practices
-- Example flows
