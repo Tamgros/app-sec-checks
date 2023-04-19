@@ -68,3 +68,4 @@ TODO
 - Part of anchor init?
 - Part of the explorer verification process
 - Client/user side best practices
+- cold-hot wallet with top ups and time delay
