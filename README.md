@@ -24,7 +24,7 @@
 - [ ] Pager duty 
 - [ ] Circuit breaker, freeze ability on attack
 - [ ] Treasury abstracted away
-- [ ] [Airgapped signing](https://www.notion.so/Airgapped-signing-f5c5b3ab5a904d18899567816cb6cb33)
+- [ ] [Airgapped signing](https://github.com/Tamgros/app-sec-checks/blob/main/airgapped_server_signing.md)
 
 ### On chain Code
   ((request for checklist, here's some inspo ))  
