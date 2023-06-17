@@ -60,7 +60,7 @@ Jiri had a great suggestion
 - risks - security theater. Wastes time and doesn't actually increase secruity
 - Who reviews authentically?
   - v0 - self review with informal signoff
-  - v1 - some sort of DAO vote? POA?
+  - v1 - some sort of DAO vote? POA? Just need some display of certification, would be great if it's communal.
 
 TODO
 - external "approvals"
